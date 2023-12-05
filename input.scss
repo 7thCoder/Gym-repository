@@ -100,6 +100,35 @@ header{
         justify-content: space-around;
         color: aliceblue;
         // background-color: aqua;
+        animation: Opacitys;
+        animation-duration: 1s;
+        animation-timing-function: ease-in;
+
+        @keyframes Opacitys{
+            0%{
+                opacity: 0%;
+                margin-top: 0%;
+            }
+
+            25%{
+                opcacity:25%;
+            }
+
+            50%{
+                opacity:6%;
+                margin-top: 6%;
+            }
+
+            75%{
+                opacity: 75%;
+            }
+
+            100%{
+                opcity:100%;
+                margin-top: 12%;
+            }
+        }
+
 
         h1{
             font-size: calc($heading1 + 10px);
@@ -176,7 +205,7 @@ header{
         background-size: contain;
         background-repeat: no-repeat;
         // background-color: green;
-        margin-left: 20%;
+        margin-left: 20%;        
 
         #inf{
             display:flex;
@@ -190,6 +219,10 @@ header{
             padding: 3px;
             margin-top: 75%;
             margin-left: -10%;
+            // animation: moveUp;
+            // animation-duration: 2s;
+            // animation-direction: normal;
+            // animation-timing-function: ease-in;
 
             #msg{
                 width:80%;
@@ -221,6 +254,24 @@ header{
                 height:60%;
             }
 
+            
+        }
+
+        @keyframes moveUp {
+            0%{
+                margin-top:100%;
+                margin-left: -10%;
+            }
+
+            50%{
+                margin-top: 85%;
+                margin-left: -10%;
+            }
+
+            100%{
+                margin-top: 70%;
+                margin-left: -10%;
+            }
             
         }
         
@@ -284,7 +335,7 @@ header{
             height:50%;
             width:35%;
             border-radius: 7%;
-            background-image: url(models/gym.jpg);
+            background-image: url(models/workout1.jpg);
             background-size: cover;
             box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.781);
     
@@ -486,9 +537,9 @@ header{
 
             .back{
                 background-color: $tabs;
-                width:50%;
+                width:60%;
                 height: 80%;
-                border-radius: 100%;
+                border-radius:200px;
 
                 img{
                     z-index: 4;
@@ -682,7 +733,7 @@ header{
                 align-items: center;
     
                 div{
-                    background-image: url(models/gym.jpg);
+                    background-image: url(models/person.jpg);
                     background-repeat: no-repeat;
                     background-size: cover;
                     width:40px;
@@ -741,7 +792,7 @@ header{
             width:100%;
 
             .img{
-                background-image: url(models/gym.jpg);
+                background-image: url(models/person2.jpg);
                 background-repeat: no-repeat;
                 background-size: cover;
                 width:60px;
@@ -816,18 +867,20 @@ header{
 
 .section_6{
     @extend .section_3;
-    height: 15em;
+    height: 17em;
     flex-direction: row;
     justify-content: space-between;
     background-color: $primary_colour;
 
     ul{
         width:20%;
+        margin-bottom: 5%;
+
 
         h1{
             font-family: poppins;
             font-size: calc($heading1 - 15px);
-            color:#efffef
+            color:#efffef;
         }
 
         li{
@@ -855,6 +908,7 @@ header{
     .email{
         width:20%;
         margin-right: 5%;
+        margin-bottom: 3%;
         display: flex;
         flex-direction: column;
         color:#efffef;
@@ -862,6 +916,7 @@ header{
         h1{
             font-size: calc($heading1 - 10px);
             margin-bottom: 6%;
+            text-align: center;
         }
 
         input{
@@ -887,9 +942,27 @@ header{
 
         span{
             font-size: 16px;
+            text-align: center;
         }
 
     }
+}
 
+footer{
+    background-color: $accent;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    align-items: center;
+    width:100%;
+    height:3em;
+
+    hr{
+        width:80%;
+    }
+
+    span{
+        color: #efffef;
+    }
 
 }
